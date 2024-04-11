@@ -1,0 +1,1116 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.55pt 56.7pt 85.05pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.45pt'><b><span lang=RU style='font-size:13.0pt'>1 Задание</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><b><span
+style='font-size:13.0pt'>main.go</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><b><span
+style='font-size:13.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:53.45pt;text-align:justify;text-indent:-.25in'><b><span
+lang=RU style='font-size:13.0pt'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=RU style='font-size:13.0pt'>Какие уязвимости
+присутствуют в этом фрагменте кода?</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Отсутствие шифрования, </span><span
+style='font-size:13.0pt'>XSS</span><span lang=RU style='font-size:13.0pt'>(если
+злоумышленник имеет доступ к бд и может записать туда опасные данные), </span><span
+style='font-size:13.0pt'>SQL</span><span style='font-size:13.0pt'> </span><span
+style='font-size:13.0pt'>injection</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:53.45pt;text-align:justify;text-indent:-.25in'><b><span
+lang=RU style='font-size:13.0pt'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=RU style='font-size:13.0pt'>Указать строки, в
+которых присутствуют уязвимости.</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>MitM:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>66: log.Fatal(http.ListenAndServe(&quot;:8080&quot;,
+nil))</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>            XSS:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>57: fmt.Fprintf(w, &quot;Found products: %v\n&quot;,
+products)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>            SQLi:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>38: query := fmt.Sprintf(&quot;SELECT * FROM products
+WHERE name LIKE '%%%s%%'&quot;, searchQuery)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>39: rows, err := db.Query(query)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:53.45pt;text-align:justify;text-indent:-.25in'><b><span
+lang=RU style='font-size:13.0pt'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=RU style='font-size:13.0pt'>К каким последствиям
+может привести эксплуатация найденных уязвимостей злоумышленником?</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Атаки типа </span><span
+style='font-size:13.0pt'>MitM</span><span lang=RU style='font-size:13.0pt'>
+могут привести к прослушиванию и модифицированию трафика, передающегося между
+клиентом и сервером, злоумышленником.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>XSS</span><span lang=RU
+style='font-size:13.0pt'> может привести к исполнению скриптов от имени
+пользователя, который подвергся атаке.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            </span><span style='font-size:13.0pt'>SQL</span><span
+style='font-size:13.0pt'> </span><span style='font-size:13.0pt'>injection</span><span
+style='font-size:13.0pt'> <span lang=RU>позволяет злоумышленнику вмешиваться в
+запросы, которые приложение делает к своей базе данных. Как правило, это
+позволяет просматривать данные, которые он обычно не может получить. Во многих
+случаях злоумышленник может изменять или удалять эти данные.</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:53.45pt;text-align:justify;text-indent:-.25in'><b><span
+lang=RU style='font-size:13.0pt'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=RU style='font-size:13.0pt'>Описать способы
+исправления уязвимостей.</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>MitM:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>66: log.Fatal(http.ListenAndServeTLS(&quot;:443&quot;,
+&quot;server.crt&quot;, &quot;server.key&quot;, nil))</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>XSS:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>57: fmt.Fprintf(w, &quot;Found products: %v\n&quot;,
+html.EscapeString(products))</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>            </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>            SQLi:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>38: stmt, err := db.Prepare(&quot;SELECT * FROM
+products WHERE name LIKE  ?&quot;)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>       if err != nil {log.Fatal(err)}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>39: </span><span style='font-size:13.0pt'>err</span><span
+lang=RU style='font-size:13.0pt'> := </span><span style='font-size:13.0pt'>stmt</span><span
+lang=RU style='font-size:13.0pt'>.</span><span style='font-size:13.0pt'>Query</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>searchQuery</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Как альтернатива, можно отфильтровать
+строку, введённую пользователем, но в данном случае это нецелесообразно в силу
+сложности этого решения и, вероятно, добавления новых зависимостей в проект для
+решения этой задачи.</span></p>
+
+<b><span lang=RU style='font-size:13.0pt;line-height:107%;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<p class=MsoNormal style='line-height:107%'><b><span lang=RU style='font-size:
+13.0pt;line-height:107%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.45pt'><b><span lang=RU style='font-size:13.0pt'>2 Задание</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><b><span
+lang=RU style='font-size:13.0pt'> </span></b><b><span style='font-size:13.0pt'>python</span></b><b><span
+lang=RU style='font-size:13.0pt'>_1.</span></b><b><span style='font-size:13.0pt'>py</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.45pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:53.45pt;text-align:justify;text-indent:-.25in'><b><span
+lang=RU style='font-size:13.0pt'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=RU style='font-size:13.0pt'>Какие уязвимости
+присутствуют в этом фрагменте кода?</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>CSRF</span><span lang=RU
+style='font-size:13.0pt'>, </span><span style='font-size:13.0pt'>XSS</span><span
+lang=RU style='font-size:13.0pt'>, включенный режим отладки, тестировочная
+среда, некорректные фрагменты кода</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:53.45pt;text-align:justify;text-indent:-.25in'><b><span
+lang=RU style='font-size:13.0pt'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=RU style='font-size:13.0pt'>Указать строки, в
+которых присутствуют уязвимости.</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>XSS:     8: name = request.values.get('name')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>              9: age = request.values.get('age',
+'unknown')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>            10: output = Template('Hello ' + name + '!
+Your age is ' + age + '.').render()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>CSRF</span><span lang=RU style='font-size:13.0pt'>: 
+4: </span><span style='font-size:13.0pt'>app</span><span lang=RU
+style='font-size:13.0pt'> = </span><span style='font-size:13.0pt'>Flask</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>name</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Включенная отладка:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>             14: </span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>.</span><span style='font-size:13.0pt'>run</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>debug</span><span
+lang=RU style='font-size:13.0pt'>=</span><span style='font-size:13.0pt'>True</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Использование тестировочной среды и </span><span
+style='font-size:13.0pt'>MitM</span><span lang=RU style='font-size:13.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>             14: </span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>.</span><span style='font-size:13.0pt'>run</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>debug</span><span
+lang=RU style='font-size:13.0pt'>=</span><span style='font-size:13.0pt'>True</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Некорректный код:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>               </span><span style='font-size:13.0pt'>4:
+app = Flask(name)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>             11: return</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>             13: if name == &quot;main&quot;:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:53.45pt;text-align:justify;text-indent:-.25in'><b><span
+lang=RU style='font-size:13.0pt'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=RU style='font-size:13.0pt'>К каким
+последствиям может привести эксплуатация найденных уязвимостей злоумышленником?</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>Reflected</span><span style='font-size:
+13.0pt'> </span><span style='font-size:13.0pt'>XSS</span><span
+style='font-size:13.0pt'> <span lang=RU>может привести к исполнению скриптов от
+имени пользователя, который подвергся атаке.</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>CSRF</span><span lang=RU
+style='font-size:13.0pt'> может привести к выполнению вредоносных действий от
+лица авторизованного пользователя системы, который подвергся атаке
+злоумышленника.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>В совокупности возможна,
+например, фишинговая атака, в ходе которой авторизованному пользователю дадут
+ссылку, при переходе по которой, на странице будет создан и выполнен скрипт с
+вредоносным действием. Пример ссылки с возможным вредоносным действием:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU><a
+href="http://127.0.0.1:5000/page?name=123&amp;age=%3Cscript%3Ealert()%3C/script%3E"><span
+style='font-size:13.0pt'>http://127.0.0.1:5000/page?name=123&amp;age=%3Cscript%3Ealert()%3C/script%3E</span></a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Включенная отладка может
+привести к раскрытию версии используемого ПО, библиотек, локальных путей,
+исходного кода и других данных, которые могут быть использованы для построения
+новых векторов атак.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Использование тестировочной
+среды предполагает использование среды, не тестирующейся на защищённость, производительность
+и которая предполагает наличие уязвимостей.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Атаки типа </span><span
+style='font-size:13.0pt'>MitM</span><span lang=RU style='font-size:13.0pt'>
+могут привести к прослушиванию и модифицированию трафика, передающегося между
+клиентом и сервером, злоумышленником.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Некорректный код может приводит
+к некорректному выполнению программы и сбоям в работе.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:53.45pt;text-align:justify;text-indent:-.25in'><b><span
+lang=RU style='font-size:13.0pt'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=RU style='font-size:13.0pt'>Описать способы
+исправления уязвимостей.</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>XSS:  </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>11: return output, 200, {'Content-Type':
+'text/css; charset=utf-8'}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Как альтернативное решение,
+можно добавить фильтрацию параметра, но это усложнит код множественными
+проверками и, возможно, добавит новые зависимости (библиотеки для фильтрации
+ввода) в проект. В данном случае благоразумнее поменять тип контента, которым
+отвечает страница на запрос, т.к. это не повлияет на функциональность приложения.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>CSRF: </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>4: from flask_wtf.csrf import
+CSRFProtect</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>              app = Flask(__name__)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>              app.secret_key =
+&quot;super_secret_key&quot;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>              csrf</span><span lang=RU
+style='font-size:13.0pt'> = </span><span style='font-size:13.0pt'>CSRFProtect</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Включенная отладка:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>        14: </span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>.</span><span style='font-size:13.0pt'>run</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>debug</span><span
+lang=RU style='font-size:13.0pt'>=</span><span style='font-size:13.0pt'>False</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Использование тестировочной среды + </span><span
+style='font-size:13.0pt'>MitM</span><span lang=RU style='font-size:13.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.05pt;text-align:justify;text-indent:35.35pt'><span lang=RU
+style='font-size:13.0pt'>    Использовать внешний сервер. Например, командой </span><span
+style='font-size:13.0pt'>flask</span><span style='font-size:13.0pt'> </span><span
+style='font-size:13.0pt'>run</span><span lang=RU style='font-size:13.0pt'> --</span><span
+style='font-size:13.0pt'>cert</span><span lang=RU style='font-size:13.0pt'>=</span><span
+style='font-size:13.0pt'>adhoc</span><span style='font-size:13.0pt'> <span
+lang=RU>вместо метода </span></span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>.</span><span style='font-size:13.0pt'>run</span><span
+lang=RU style='font-size:13.0pt'>()</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.05pt;text-align:justify;text-indent:35.35pt'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Некорректный код:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>          4: </span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'> = </span><span style='font-size:13.0pt'>Flask</span><span
+lang=RU style='font-size:13.0pt'>(__</span><span style='font-size:13.0pt'>name</span><span
+lang=RU style='font-size:13.0pt'>__)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>        </span><span style='font-size:13.0pt'>11:
+return  # </span><span lang=RU style='font-size:13.0pt'>Добавить</span><span
+lang=RU style='font-size:13.0pt'> </span><span lang=RU style='font-size:13.0pt'>табуляцию</span><span
+lang=RU style='font-size:13.0pt'> </span><span lang=RU style='font-size:13.0pt'>перед</span><span
+style='font-size:13.0pt'> return</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>        13: if __name__ == &quot;__main__&quot;:</span></p>
+
+<span style='font-size:13.0pt;line-height:107%;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal style='line-height:107%'><span style='font-size:13.0pt;
+line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><b><span style='font-size:13.0pt'>2 </span></b><b><span lang=RU
+style='font-size:13.0pt'>Задание</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><b><span
+style='font-size:13.0pt'>python_</span></b><b><span lang=RU style='font-size:
+13.0pt'>2</span></b><b><span style='font-size:13.0pt'>.py</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;text-align:justify;
+text-indent:-.25in'><b><span lang=RU style='font-size:13.0pt'>1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=RU style='font-size:13.0pt'>Какие уязвимости присутствуют в этом фрагменте
+кода?</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>CSRF</span><span lang=RU style='font-size:13.0pt'>,
+включенный режим отладки, тестировочная среда, некорректные фрагменты кода</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;text-align:justify;
+text-indent:-.25in'><b><span lang=RU style='font-size:13.0pt'>2)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=RU style='font-size:13.0pt'>Указать строки, в которых присутствуют уязвимости.</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>RCE:  10: output = subprocess.check_output(cmd,
+shell=True, text=True)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>CSRF</span><span lang=RU style='font-size:13.0pt'>: 
+4: </span><span style='font-size:13.0pt'>app</span><span lang=RU
+style='font-size:13.0pt'> = </span><span style='font-size:13.0pt'>Flask</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>name</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Включенная отладка:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>             13: </span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>.</span><span style='font-size:13.0pt'>run</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>debug</span><span
+lang=RU style='font-size:13.0pt'>=</span><span style='font-size:13.0pt'>True</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Использование тестировочной среды и </span><span
+style='font-size:13.0pt'>MitM</span><span lang=RU style='font-size:13.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>             13: </span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>.</span><span style='font-size:13.0pt'>run</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>debug</span><span
+lang=RU style='font-size:13.0pt'>=</span><span style='font-size:13.0pt'>True</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Некорректный код:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>               </span><span style='font-size:13.0pt'>4:
+app = Flask(name)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>             11: return</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>             12: if name == &quot;main&quot;:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;text-align:justify;
+text-indent:-.25in'><span lang=RU style='font-size:13.0pt'>3)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
+lang=RU style='font-size:13.0pt'>К каким последствиям может привести
+эксплуатация найденных уязвимостей злоумышленником?</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+.25in'><span style='font-size:13.0pt'>RCE</span><span lang=RU style='font-size:
+13.0pt'> может привести к удалённому выполнению вредоносного кода на сервере.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+.25in'><span style='font-size:13.0pt'>CSRF</span><span lang=RU
+style='font-size:13.0pt'> может привести к выполнению вредоносных действий от
+лица авторизованного пользователя системы, который подвергся атаке
+злоумышленника.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+.25in'><span lang=RU style='font-size:13.0pt'>Включенная отладка может привести
+к раскрытию версии используемого ПО, библиотек, локальных путей, исходного кода
+и других данных, которые могут быть использованы для построения новых векторов
+атак.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+.25in'><span lang=RU style='font-size:13.0pt'>Использование тестировочной среды
+предполагает использование среды, не тестирующейся на защищённость,
+производительность и которая предполагает наличие уязвимостей.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+.25in'><span lang=RU style='font-size:13.0pt'>Атаки типа </span><span
+style='font-size:13.0pt'>MitM</span><span lang=RU style='font-size:13.0pt'>
+могут привести к прослушиванию и модифицированию трафика, передающегося между
+клиентом и сервером, злоумышленником.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+.25in'><span lang=RU style='font-size:13.0pt'>Некорректный код может приводит к
+некорректному выполнению программы и сбоям в работе.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;text-align:justify;
+text-indent:-.25in'><span lang=RU style='font-size:13.0pt'>4)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
+lang=RU style='font-size:13.0pt'>Описать способы исправления уязвимостей.</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>RCE: </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>    10: output = socket.getaddrinfo(hostname,0,0,0,0)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Как альтернативное решение (приведено
+ниже), можно использовать фильтрацию параметра, чтобы избавиться от
+потенциальных возможностей удалённо выполнить команду от имени сервера, но это
+нецелесообразно, поскольку библиотека </span><span style='font-size:13.0pt'>socket</span><span
+lang=RU style='font-size:13.0pt'> уже является зависимостью проекта, обладает
+всеми необходимыми проверками у метода, реализующего идентичный функционал,
+использование этого метода эффективнее по ресурсам.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>      </span><span style='font-size:13.0pt'>8:
+hostname = request.values.get('hostname')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span style='font-size:13.0pt'>from urllib.parse import unquote</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>            while hostname.find(&quot;%&quot;)&gt;-1:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>                        hostname = unquote(hostname)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in'><span style='font-size:13.0pt'>            bad_chars
+= [&quot;|&quot;, &quot;&amp;&quot;, &quot;&lt;&quot;, &quot;&gt;&quot;,
+&quot;(&quot;, &quot;)&quot;, &quot;;&quot;, &quot;!&quot;, &quot;$&quot;,
+&quot;{&quot;, &quot;}&quot;, &quot;-&quot;, &quot;[&quot;, &quot;]&quot;,
+&quot;'&quot;, '&quot;']</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in'><span style='font-size:13.0pt'>            for
+char in bad_chars:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in'><span style='font-size:13.0pt'>                        hostname
+= hostname.replace(char, &quot;&quot;)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>CSRF: </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>          4: from flask_wtf.csrf import CSRFProtect</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>              app = Flask(__name__)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>              app.secret_key =
+&quot;super_secret_key&quot;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>              csrf</span><span lang=RU
+style='font-size:13.0pt'> = </span><span style='font-size:13.0pt'>CSRFProtect</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Включенная отладка:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>        13: </span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'>.</span><span style='font-size:13.0pt'>run</span><span
+lang=RU style='font-size:13.0pt'>(</span><span style='font-size:13.0pt'>debug</span><span
+lang=RU style='font-size:13.0pt'>=</span><span style='font-size:13.0pt'>False</span><span
+lang=RU style='font-size:13.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Использование тестировочной среды + </span><span
+style='font-size:13.0pt'>MitM</span><span lang=RU style='font-size:13.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Использовать внешний сервер.
+Например, командой </span><span style='font-size:13.0pt'>flask</span><span
+style='font-size:13.0pt'> </span><span style='font-size:13.0pt'>run</span><span
+lang=RU style='font-size:13.0pt'> --</span><span style='font-size:13.0pt'>cert</span><span
+lang=RU style='font-size:13.0pt'>=</span><span style='font-size:13.0pt'>adhoc</span><span
+lang=RU style='font-size:13.0pt'> вместо метода </span><span style='font-size:
+13.0pt'>app</span><span lang=RU style='font-size:13.0pt'>.</span><span
+style='font-size:13.0pt'>run</span><span lang=RU style='font-size:13.0pt'>()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>Некорректный код:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>          4: </span><span style='font-size:13.0pt'>app</span><span
+lang=RU style='font-size:13.0pt'> = </span><span style='font-size:13.0pt'>Flask</span><span
+lang=RU style='font-size:13.0pt'>(__</span><span style='font-size:13.0pt'>name</span><span
+lang=RU style='font-size:13.0pt'>__)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>        </span><span style='font-size:13.0pt'>11:
+return  # Добавить табуляцию перед return</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'>        12: if __name__ == &quot;__main__&quot;:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span
+style='font-size:13.0pt'> </span></p>
+
+<span style='font-size:13.0pt;line-height:107%;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal style='line-height:107%'><span style='font-size:13.0pt;
+line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><b><span style='font-size:13.0pt'>3 Задание</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;text-align:justify;
+text-indent:-.25in'><span lang=RU style='font-size:13.0pt'>1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:13.0pt'>Расскажите, какие потенциальные проблемы
+безопасности существуют для данного сервиса?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Отсутствие механизма
+аутентификации и авторизации пользователей. Диаграмма не показывает, как
+происходит аутентификация и авторизация пользователей для доступа к Microfront
+и взаимодействия с сервисом. Это может привести к несанкционированному доступу
+и компрометации данных.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Отсутствие механизмов аутентификации и
+авторизации для некоторых компонентов. На диаграмме не показано, как
+осуществляется аутентификация и авторизация для доступа к компонентам
+Microfront, Backend application, S3 и PostgreSQL. Это может привести к
+несанкционированному доступу к данным и функциональности.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Недостаточная изоляция компонентов.
+Диаграмма не показывает, как разделены компоненты с точки зрения безопасности,
+например, используются ли отдельные виртуальные частные облака, сети или
+контейнеры. Это может привести к распространению атак между компонентами и
+компрометации всей системы.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Отсутствие механизмов аудита и
+мониторинга. На диаграмме не указано, предусмотрены ли механизмы для аудита
+действий пользователей, регистрации событий безопасности и мониторинга системы.
+Это может затруднить своевременное обнаружение и реагирование на инциденты
+безопасности.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Отсутствие явно указанного
+межсетевого экрана. На диаграмме не показан межсетевой экран, который
+контролировал бы входящий и исходящий трафик между внутренними компонентами
+системы и внешней сетью (Интернет). Это может создать уязвимость, позволяющую
+злоумышленникам получить несанкционированный доступ к внутренним ресурсам
+системы.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;text-align:justify;
+text-indent:-.25in'><span lang=RU style='font-size:13.0pt'>2)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:13.0pt'>Расскажите, к каким последствиям может
+привести эксплуатация проблем, найденных вами?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Несанкционированный доступ к
+компонентам системы и компрометация данных.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Распространение атак между
+компонентами и компрометация всей системы.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Сложности в обнаружении и
+реагировании на инциденты безопасности.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Если каналы связи не защищены
+сертифицированными средствами криптографии, то существует риску компрометации
+обрабатываемых данных.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;text-align:justify;
+text-indent:-.25in'><span lang=RU style='font-size:13.0pt'>3)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:13.0pt'>Расскажите, какие способы исправления
+уязвимостей и смягчения рисков вы можете предложить по отмеченным вами
+проблемам безопасности?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Реализовать надежные механизмы
+аутентификации и авторизации для доступа ко всем компонентам сервиса.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Обеспечить изоляцию компонентов
+с использованием виртуальных частных облаков, сетей или контейнеров, чтобы
+ограничить распространение атак.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Внедрить механизмы аудита,
+регистрации событий безопасности и мониторинга системы для своевременного
+обнаружения и реагирования на инциденты безопасности.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Регулярно проводить тестирование
+на проникновение и анализ уязвимостей для выявления и устранения новых рисков
+безопасности.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Развернуть надежный межсетевой экран между
+внутренними компонентами системы и внешней сетью (Интернет).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Настроить межсетевой экран таким
+образом, чтобы разрешить только необходимый входящий и исходящий трафик,
+блокируя все остальное по умолчанию.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Регулярно анализировать и
+пересматривать правила межсетевого экрана, чтобы обеспечить их соответствие
+текущим требованиям безопасности.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Использовать дополнительные
+средства защиты, такие как системы предотвращения вторжений (IPS) и системы
+обнаружения вторжений (IDS), для мониторинга трафика и выявления потенциальных
+атак.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Использование сертифицированных средств
+криптографической защиты для каналов связи.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;text-align:justify;
+text-indent:-.25in'><span lang=RU style='font-size:13.0pt'>4)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:13.0pt'>Напишите список уточняющих вопросов, которые
+вы бы задали разработчикам данного сервиса?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Реализовано ли шифрование данных
+в PostgreSQL? В каком виде передаются данные в PostgreSQL? С помощью какого
+протокола и каким образом передаются данные в PostgreSQL? Реализована ли
+репликация данных и мониторинг серверов?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Есть ли шифрование данных в S3?
+В каком виде передаются данные от S3? С помощью какого протокола и каким
+образом передаются данные от S3? Что S3 из себя представляет и каким образом
+обрабатывает данные? Реализована ли репликация данных и мониторинг серверов?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Где Auth хранит аутентификационные данные,
+что они из себя представляют и в каком виде хранятся? Как происходит
+аутентификация? С помощью какого протокола передаются данные в этот сервис?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Что из себя представляет Backend
+Application? Как этот сервис обрабатывает данные?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Проводится ли регулярный аудит
+безопасности и мониторинг для выявления уязвимостей и атак? Если да, то с какой
+периодичностью и какими средствами?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Какие дополнительные меры
+безопасности планируется внедрить для защиты сервиса и данных пользователей?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify'><span lang=RU
+style='font-size:13.0pt'>            Каким образом обеспечивается безопасная
+разработка и тестирование на наличие уязвимостей?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Существуют ли механизмы
+ограничения доступа и аудита действий привилегированных пользователей и
+администраторов системы?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Используется ли в настоящее
+время межсетевой экран для защиты внутренних компонентов системы от внешней
+сети?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Если межсетевой экран
+используется, какие правила входящего и исходящего трафика настроены?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Как часто проводится анализ и
+пересмотр правил межсетевого экрана?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Используются ли дополнительные
+средства защиты, такие как IPS или IDS, для мониторинга сетевого трафика?</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+35.4pt'><span lang=RU style='font-size:13.0pt'>Используются ли
+криптографические средства в каналах связи?</span></p>
+
+</div>
+
+</body>
+
+</html>
